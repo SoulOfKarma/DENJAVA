@@ -14,7 +14,14 @@ public class DAO
 //        {
 //         return null;
 //        }
-         if(u.getMail().equalsIgnoreCase("diego@mail.com"))
+         if(!u.getMail().equalsIgnoreCase("diego@mail.com")&& !u.getPass().equalsIgnoreCase("123"))
+        {
+          
+                User newUser = new User(u.getMail(),u.getPass(),"Diego Soto");
+                newUser.addError(new Error(300,"Email y pass error"));
+                return newUser;
+        }
+        else if(u.getMail().equalsIgnoreCase("diego@mail.com"))
         {
           /*ok*/
             if(u.getPass().equalsIgnoreCase("123"))
