@@ -27,7 +27,7 @@
         <title>Productos</title>
     </head>
     <body>
-        <h1> Bienvenido : <%=usu.getUser() %></h1> 
+        <h1> Bienvenido : <%=usu.getUser() %></h1> <label>    </label><a href="ServletCerrarSession">CerrarSession</a> <br>
         <a href="Producto.jsp">Agregar</a>
         <a href="Listar.jsp">Listar</a>
         <form action="ServletProducto" method="post" >

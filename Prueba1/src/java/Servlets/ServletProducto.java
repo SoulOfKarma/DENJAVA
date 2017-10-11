@@ -23,8 +23,7 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet(name = "ServletProducto", urlPatterns = {"/ServletProducto"})
 public class ServletProducto extends HttpServlet {
-Producto p = new Producto();
-    ArregloProducto ar = new ArregloProducto();
+   ArregloProducto ar = new ArregloProducto();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -79,7 +78,9 @@ Producto p = new Producto();
             throws ServletException, IOException
     {
         HttpSession respuesta = request.getSession(true);
-        
+        HttpSession respuesta2 = request.getSession(true);
+         Producto p = new Producto();
+         
         String codigo = request.getParameter("cod");
         String modelo = request.getParameter("modelo");
         String marca = request.getParameter("marca");
@@ -112,6 +113,8 @@ Producto p = new Producto();
           String agregado = "Se Agrego la zapatilla";
           request.setAttribute("mensaje", agregado);
          respuesta.setAttribute("arreglo", ar);
+         respuesta2.setAttribute("arreglos", ar.imprimir());
+        // getServletConfig().getServletContext().getRequestDispatcher("/Producto.jsp").forward(request, response);
           request.getRequestDispatcher("Producto.jsp").forward(request, response);
         }
        // processRequest(request, response);
