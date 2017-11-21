@@ -1,0 +1,32 @@
+service crond status
+
+cd /home/
+
+ls
+
+vi /etc/crondtab
+
+11 21 * * * root mkdir/home/algoo
+12 21 * * * ""   ""    ""   ""
+
+
+date o clock
+
+
+
+mkdir /home/algooo
+rmdir /home/algooo
+
+mkdir algo
+
+touch tarea.sh
+
+#!/bin/bash
+mkdir /home/pro
+adduser juan
+touch /home/archivo.txt
+
+imgsrc : "IMG/"+ <%get.var%>
+
+
+11 21 * * * root . /home/tarea.sh
